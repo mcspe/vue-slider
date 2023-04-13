@@ -48,7 +48,7 @@
 
     </div>
 
-    <div @click="play" class="css-btn">Autoplay</div>
+    <div @click="play" class="css-btn"><i v-if="!isPlaying" class="fa-solid fa-play"></i><i v-else class="fa-solid fa-pause"></i> Autoplay</div>
 
   </main>
   

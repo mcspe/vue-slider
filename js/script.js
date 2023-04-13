@@ -33,6 +33,7 @@ createApp({
         }
       ],
       active: 'active',
+      playTimingFunct: null,
       isPlaying: false
     }
   },
@@ -83,7 +84,16 @@ createApp({
     },
 
     play(){
-      console.log('ciao');
+      if (!this.isPlaying){
+        this.isPlaying = !this.isPlaying;
+        playTimingFunct = setInterval(() => {
+          this.bottonFwd();
+        }, 3000);
+      }
+      else{
+        clearInterval(playTimingFunct);
+        this.isPlaying = !this.isPlaying;
+      }
     }
 
   },
