@@ -22,47 +22,27 @@
 </head>
 <body>
 
-  <main class="ms-wrapper d-flex justify-content-center align-items-center">
+  <main id="app" class="ms-wrapper d-flex justify-content-center align-items-center">
 
     <div class="ms-container w-75 h-75 position-relative">
 
       <div class="ms-slider h-100">
-        <!-- <img src="./img/01.webp" class="d-none">
-        <img src="./img/02.webp" class="d-none">
-        <img src="./img/03.webp" class="">
-        <img src="./img/04.webp" class="d-none">
-        <img src="./img/05.webp" class="d-none"> -->
+        <img :src="imgDB[imgCounter].src" :alt="imgDB[imgCounter].alt + (imgCounter+1)">
       </div>
       
       <div class="ms-thumbnails h-100 d-flex flex-column">
 
-        <!-- <div class="ms-img-cont">
-          <img src="./img/01.webp" class="">
+        <div v-for="(image, i) in imgDB" class="ms-img-cont">
+          <img :src="imgDB[i].src" class="">
         </div>
-
-        <div class="ms-img-cont">
-          <img src="./img/02.webp" class="">
-        </div>
-
-        <div class="ms-img-cont">
-          <img src="./img/03.webp" class="">
-        </div>
-
-        <div class="ms-img-cont">
-          <img src="./img/04.webp" class="">
-        </div>
-
-        <div class="ms-img-cont active">
-          <img src="./img/05.webp" class="">
-        </div> -->
         
       </div>
 
-      <div class="ms-slider-controller backward">
+      <div @click="bottonBwd" class="ms-slider-controller backward">
         <i class="fa-solid fa-chevron-up"></i>
       </div>
 
-      <div class="ms-slider-controller forward">
+      <div @click="bottonFwd" class="ms-slider-controller forward">
         <i class="fa-solid fa-chevron-down"></i>
       </div>
 

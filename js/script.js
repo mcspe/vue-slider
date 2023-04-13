@@ -1,4 +1,70 @@
+const {createApp} = Vue;
 
+createApp({
+
+  data(){
+    return{
+      imgCounter: 4,
+      imgDB : [
+        {
+          src: './img/01.webp',
+          alt: 'img'
+        },
+        {
+          src: './img/02.webp',
+          alt: 'img'
+        },
+        {
+          src: './img/03.webp',
+          alt: 'img'
+        },
+        {
+          src: './img/04.webp',
+          alt: 'img'
+        },
+        {
+          src: './img/05.webp',
+          alt: 'img'
+        }
+      ]
+    }
+  },
+
+  methods:{
+
+    bottonBwd(){
+
+      if(this.imgCounter > 0){
+
+        this.imgCounter--;
+
+      }else{
+
+        this.imgCounter = this.imgDB.length - 1;
+
+      }
+    },
+
+    bottonFwd(){
+
+      if(this.imgCounter < this.imgDB.length - 1){
+
+        this.imgCounter++;
+
+      }else{
+
+        this.imgCounter = 0;
+
+      }
+    }
+
+  },
+
+  mounted(){
+    console.log(this.imgCounter);
+  }
+
+}).mount('#app');
 
 
 
