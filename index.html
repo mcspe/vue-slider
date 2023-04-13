@@ -24,7 +24,7 @@
 
   <main id="app" class="ms-wrapper d-flex justify-content-center align-items-center">
 
-    <div @mouseover="isMouseHover = true" @mouseleave="isMouseHover = false"  class="ms-container w-75 h-75 position-relative">
+    <div @mouseover="togglePlay(true)" @mouseleave="togglePlay(false)"  class="ms-container w-75 h-75 position-relative">
 
       <div class="ms-slider h-100">
         <img :src="imgDB[imgCounter].src" :alt="imgDB[imgCounter].alt + (imgCounter+1)">

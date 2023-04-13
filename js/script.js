@@ -34,8 +34,7 @@ createApp({
       ],
       active: 'active',
       playTimingFunct: null,
-      isPlaying: false,
-      isMouseHover: false
+      isPlaying: false
     }
   },
 
@@ -85,7 +84,7 @@ createApp({
     },
 
     play(){
-      if (!this.isPlaying && !this.isMouseHover){
+      if (!this.isPlaying){
         this.isPlaying = !this.isPlaying;
         this.playTimingFunct = setInterval(() => {
           this.bottonFwd();
@@ -95,7 +94,18 @@ createApp({
         clearInterval(this.playTimingFunct);
         this.isPlaying = !this.isPlaying;
       }
-      console.log(this.playTimingFunct);
+    },
+
+    togglePlay(isMouseHover){
+      if (this.isPlaying){
+        if(isMouseHover){
+          clearInterval(this.playTimingFunct);
+        }else{
+          this.playTimingFunct = setInterval(() => {
+            this.bottonFwd();
+          }, 1500);
+        }
+      }
     }
 
   },
