@@ -32,8 +32,8 @@
       
       <div class="ms-thumbnails h-100 d-flex flex-column">
 
-        <div v-for="(image, i) in imgDB" class="ms-img-cont">
-          <img :src="imgDB[i].src" class="">
+        <div v-for="(image, i) in imgDB" class="ms-img-cont" @click="imgActivate(i)" :class="{ active: imgDB[i].isActive }">
+          <img :src="imgDB[i].src" :alt="imgDB[imgCounter].alt + (i+1)">
         </div>
         
       </div>
@@ -48,7 +48,7 @@
 
     </div>
 
-    <div class="css-btn">Autoplay</div>
+    <div @click="play" class="css-btn">Autoplay</div>
 
   </main>
   
