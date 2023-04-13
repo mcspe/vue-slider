@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
+  <!-- VUE -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.47/vue.global.min.js' integrity='sha512-DJ2+sosWB5FnZAIeCWAHu2gxQ7Gi438oOZLcBQSOrW8gD0s7LIXDv/5RW76B3FcljF40BXnfqNIo6Dhp7dFHJg==' crossorigin='anonymous'></script>
+
+  <!-- FONT AWESOME -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css' integrity='sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==' crossorigin='anonymous'/>
+
+  <!-- BOOTSTRAP -->
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css' integrity='sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==' crossorigin='anonymous'/>
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <title>Vue Slider</title>
+</head>
+<body>
+
+  <main class="ms-wrapper d-flex justify-content-center align-items-center">
+
+    <div class="ms-container w-75 h-75 position-relative">
+
+      <div class="ms-slider h-100">
+        <!-- <img src="./img/01.webp" class="d-none">
+        <img src="./img/02.webp" class="d-none">
+        <img src="./img/03.webp" class="">
+        <img src="./img/04.webp" class="d-none">
+        <img src="./img/05.webp" class="d-none"> -->
+      </div>
+      
+      <div class="ms-thumbnails h-100 d-flex flex-column">
+
+        <!-- <div class="ms-img-cont">
+          <img src="./img/01.webp" class="">
+        </div>
+
+        <div class="ms-img-cont">
+          <img src="./img/02.webp" class="">
+        </div>
+
+        <div class="ms-img-cont">
+          <img src="./img/03.webp" class="">
+        </div>
+
+        <div class="ms-img-cont">
+          <img src="./img/04.webp" class="">
+        </div>
+
+        <div class="ms-img-cont active">
+          <img src="./img/05.webp" class="">
+        </div> -->
+        
+      </div>
+
+      <div class="ms-slider-controller backward">
+        <i class="fa-solid fa-chevron-up"></i>
+      </div>
+
+      <div class="ms-slider-controller forward">
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+
+    </div>
+
+    <div class="css-btn">Autoplay</div>
+
+  </main>
+  
+  <script src="./js/script.js"></script>
+  
+</body>
+</html>
