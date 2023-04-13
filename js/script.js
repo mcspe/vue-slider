@@ -4,7 +4,7 @@ createApp({
 
   data(){
     return{
-      imgCounter: 4,
+      imgCounter: 0,
       imgDB : [
         {
           src: './img/01.webp',
